@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts> 
+	<package name="LoginPage" namespace="/" extends="struts-default">
+		<action name="Login" class="com.Service.Login">
+	 		<result name="success">/AddProduct.jsp</result>
+			<result name="failure">/Login.jsp</result>	
+		</action> 
+	</package>
+	
+	
+	<package name="AccountCreationPage" namespace="/" extends="struts-default">
+		<action name="Create" class="com.Service.AccountCreation">
+			<result name="success">/Login.jsp</result>
+			<result name="failure">/AccountCreation.jsp</result>	
+		</action>
+	</package>
+	
+	 
+	<package name="ForgotPasswordPage" namespace="/" extends="struts-default">
+		<action name="ForgotPassword" class="com.Service.ForgotPassword">
+			<result name="success">/Login.jsp</result>
+			<result name="failure">/ForgotPassword.jsp</result>	
+		</action>
+	</package>
+	
+	<package name="AddProductPage" namespace="/" extends="struts-default">
+		<action name="AddProduct" class="com.Service.AddProduct">
+			<result name="add">/AddProduct.jsp</result>
+			<result name="buy">/EditAndDeletePage.jsp</result>
+			<result name="retry">/AddProduct.jsp</result>	
+		</action>
+	</package> 
+	
+	<package name="EditPage" namespace="/" extends="struts-default">
+		<action name="edit" class="com.Service.EditAndDelete">
+			<result name="success">/EditAndDeletePage.jsp</result>
+			<result name="failure">/EditAndDeletePage.jsp</result>	
+		</action> 
+	</package>
+	
+	<package name="DeletePage" namespace="/" extends="struts-default">
+		<action name="delete" class="com.Service.Delete">
+			<result name="success">/EditAndDeletePage.jsp</result>
+			<result name="failure">/EditAndDeletePage.jsp</result>	
+		</action>
+	</package>
+	
+</struts>
